@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Categroy>
+<section id="featured-services" class="featured-services">
+
+   
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                <a href="/Home/News/@item.Id">
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" style="width:100%" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="icofont-drug"></i></div>
+                            <h4 class="title"><a href="/Home/News/@item.Id">@item.Name</a></h4>
+                            <p class="description">@item.Description</p>
+                        </div>
+                    </div>
+
+
+                </a>
+
+
+                        }
+                </div>
+
+        </div>
+
+            </section><!-- End Featured Services Section -->
